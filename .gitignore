@@ -1,0 +1,7 @@
+data/*
+!data/cleared_val_ids.csv
+!data/cleared_train_ids.csv
+!data/processed_df.csv
+__pycache__
+.vscode
+.conda

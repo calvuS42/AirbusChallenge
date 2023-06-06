@@ -1,0 +1,33 @@
+path:
+  dataset_path: './data/processed_df.csv'
+  train_ids: './data/cleared_train_ids.csv'
+  val_ids: './data/cleared_val_ids.csv'
+  checkpoint_path: './weights'
+
+train_datagen_params:
+  featurewise_center: False
+  samplewise_center: False
+  rotation_range: 15
+  width_shift_range: 0.1
+  height_shift_range: 0.1
+  shear_range: 0.01
+  zoom_range: [0.9, 1.25] 
+  horizontal_flip: True 
+  vertical_flip: True
+  fill_mode: 'reflect'
+  data_format: 'channels_last'
+
+dataset_params:
+  img_folder_path: './data/train_v2/'
+  batch_size: 8
+  shuffle: True
+
+model_params:
+  num_classes: 1
+  input_shape: [768, 768, 3]
+
+training_params:
+  epochs: 25
+  learning_rate: 0.0001
+  steps_per_epoch: 500
+  validation_steps: 200
